@@ -51,7 +51,7 @@ namespace DragonFruit.Software.Desktop.Diagnostics
         /// <summary>
         /// Searches for a string, returning a fallback in case of an error
         /// </summary>
-        private static string SearchForOrDefault(string key, string location, string fallback)
+        public static string SearchForOrDefault(string key, string location, string fallback)
         {
             try
             {
