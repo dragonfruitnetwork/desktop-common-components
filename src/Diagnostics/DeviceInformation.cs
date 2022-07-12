@@ -8,7 +8,7 @@ using System.Management;
 
 namespace DragonFruit.Software.Desktop.Diagnostics
 {
-    internal static class DeviceInformation
+    public static class DeviceInformation
     {
         /// <summary>
         /// Gets the commercial name of the operating system this application is running on
