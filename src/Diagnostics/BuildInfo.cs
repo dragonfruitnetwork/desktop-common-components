@@ -18,5 +18,13 @@ namespace DragonFruit.Software.Desktop.Diagnostics
         public static readonly string DisplayVersion = IsDeployedVersion
             ? AppVersion.ToString(AppVersion.Build != 0 ? 3 : 2)
             : $"{DateTime.Now:yyyy.Mdd} (Development Edition)";
+
+        public static string LogHeader(string appName) => string.Join(Environment.NewLine, new[]
+        {
+            $"{appName} · Version {DisplayVersion}",
+            $"Running on {DeviceInformation.OperatingSystemName} Build {DeviceInformation.BuildNumber} · {DeviceInformation.Architecture}",
+            $"CPU: {DeviceInformation.ProcessorModel} · RAM: {DeviceInformation.TotalMemory:0.0} GB",
+            Environment.NewLine
+        });
     }
 }
